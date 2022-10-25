@@ -18,6 +18,11 @@ h2 {
   font-weight: bold;
   margin: 20px 0;
 }
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 15px 0;
+}
 
 /* ==== HEADER ==== */
 
@@ -49,6 +54,7 @@ button.nav_header {
   background-color: black;
   border-style: none;
   color: white;
+  padding: 0 15px;
 }
 .nav_header p {
   margin: 0 3px;
@@ -138,4 +144,30 @@ a {
 .main_text p {
   font-size: 20px;
   width: 55%;
+}
+
+/* -- Articles --  */
+article {
+  height: 200px;
+  display: flex;
+}
+article p {
+  margin-bottom: 15px;
+}
+article .text {
+  width: 280px;
+}
+article .text a {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+}
+article .images {
+  display: flex;
+  justify-content: space-around;
+}
+article .images img {
+  width: 31%;
+  object-fit: cover;
 }
