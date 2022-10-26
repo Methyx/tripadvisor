@@ -176,11 +176,12 @@ p.navigation,
 .caroussel {
   width: 70%;
   display: flex;
-  gap: 20px;
+  gap: 10%;
   overflow-x: scroll;
+  box-sizing: border-box;
 }
 .diapo-caroussel {
-  width: 32%;
+  width: 24%;
   flex-shrink: 0;
 }
 .diapo-caroussel img {
@@ -189,7 +190,6 @@ p.navigation,
 }
 .diapo-caroussel h3 {
   font-size: 18px;
-  margin-top: -20px;
 }
 .diapo-caroussel p {
   font-size: 14px;
@@ -198,6 +198,7 @@ p.navigation,
 .diapo-caroussel .heart {
   width: 40px;
   height: 40px;
+  margin-top: -50px;
   font-size: 20px;
   background-color: white;
   border-radius: 50%;
@@ -205,6 +206,39 @@ p.navigation,
   align-items: center;
   justify-content: center;
   position: relative;
-  top: -190px;
+  top: -140px;
   left: 210px;
+}
+.diapo-caroussel .customer-choice {
+  margin-top: -40px;
+  width: 40px;
+  height: 40px;
+  background-color: yellow;
+  position: relative;
+  top: -20px;
+  left: 10px;
+}
+
+/* ================= FOOTER ==================== */
+footer {
+  height: 200px;
+  background-color: #faf1ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+footer img {
+  width: 50px;
+}
+footer span {
+  font-family: var(--fontMedium);
+}
+footer a {
+  font-family: var(--fontMedium);
+  text-decoration: none;
+}
+footer a:visited {
+  text-decoration: none;
+  color: black;
 }
