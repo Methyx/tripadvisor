@@ -157,7 +157,7 @@ p.navigation,
 
 /* ------------- Articles --------------  */
 .immanquables {
-  height: 200px;
+  height: 330px;
   display: flex;
   margin-bottom: 40px;
 }
@@ -173,15 +173,38 @@ p.navigation,
   color: black;
   text-decoration: underline;
 }
-.immanquables .caroussel {
+.caroussel {
   width: 70%;
   display: flex;
   gap: 20px;
   overflow-x: scroll;
-  /* justify-content: space-between; */
 }
-.immanquables .caroussel img {
+.diapo-caroussel {
   width: 32%;
-  object-fit: cover;
   flex-shrink: 0;
+}
+.diapo-caroussel img {
+  object-fit: cover;
+  height: 200px;
+}
+.diapo-caroussel h3 {
+  font-size: 18px;
+  margin-top: -20px;
+}
+.diapo-caroussel p {
+  font-size: 14px;
+  color: var(--lightGreyText);
+}
+.diapo-caroussel .heart {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -190px;
+  left: 210px;
 }
