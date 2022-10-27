@@ -52,6 +52,10 @@ header nav {
   display: flex;
   gap: 15px;
 }
+header .responsive3 {
+  display: none;
+}
+
 .nav_header {
   height: 40px;
   box-sizing: border-box;
@@ -92,7 +96,7 @@ button.nav_header:hover {
 /* -------------- Menu --------------  */
 .menu {
   margin: 30px 0;
-  height: 65px;
+  height: 68px;
   display: flex;
   justify-content: space-between;
   gap: 10px;
@@ -100,7 +104,9 @@ button.nav_header:hover {
   top: 0; */
 }
 .menu .selection {
-  flex-grow: 1;
+  /* flex-grow: 1; */
+  width: calc(16% - 4px);
+  height: 100%;
   box-sizing: border-box;
   border: 1px solid black;
   border-radius: 12px;
@@ -113,6 +119,9 @@ button.nav_header:hover {
   background-color: black;
   color: white;
   cursor: pointer;
+}
+.menu .responsive1 {
+  display: none;
 }
 
 /* -------------- Photos --------------  */
@@ -152,10 +161,10 @@ p.navigation,
 /* ------------ Texte chapeau ----------- */
 .main_text {
   margin-bottom: 40px;
+  width: 55%;
 }
 .main_text p {
   font-size: 20px;
-  width: 55%;
 }
 
 /* ------------- Articles --------------  */
@@ -169,6 +178,7 @@ p.navigation,
 }
 .immanquables .text {
   width: 30%;
+  margin-right: 10px;
 }
 .immanquables .text a {
   font-size: 16px;
@@ -250,4 +260,124 @@ footer a {
 footer a:visited {
   text-decoration: none;
   color: black;
+}
+
+/* ================= RESPONSIVE ==================== */
+
+@media (max-width: 1183px) {
+  .container {
+    /* background-color: salmon; */
+    padding: 0 15px;
+  }
+  /* changement du menu sur 2 lignes */
+  .menu {
+    height: 112px;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .menu .responsive1 {
+    display: flex;
+  }
+  .menu .selection {
+    height: 45%;
+    width: calc(25% - 10px);
+    justify-content: space-between;
+  }
+  /* Diminution du cadre photos */
+  .cadre-photos {
+    height: 370px;
+  }
+}
+
+@media (max-width: 1023px) {
+  /* Les textes du menu header disparraissent */
+  header nav .responsive2 {
+    display: none;
+  }
+  /* Diminution du cadre photos */
+  .cadre-photos {
+    height: 275px;
+  }
+  /* Extension de la zone texte principale */
+  .main_text {
+    width: 100%;
+  }
+  /* La taille des diapos du caroussel est fixée */
+  .diapo-caroussel {
+    width: 255px;
+  }
+  .immanquables .text {
+    width: 40%;
+  }
+}
+
+@media (max-width: 767px) {
+  /* changement du header */
+  header {
+    height: 50px;
+    font-size: 20px;
+  }
+  header .logo {
+    height: 28px;
+  }
+  header nav {
+    display: none;
+  }
+  header .responsive3 {
+    display: flex;
+  }
+  /* diminution de la taille du titre */
+  h1 {
+    font-size: 32px;
+  }
+  /* retour du menu sur 1 ligne */
+  .menu {
+    height: 60px;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    gap: 5px;
+  }
+  .menu .responsive1 {
+    display: flex;
+  }
+  .menu .selection {
+    height: 100%;
+    flex-shrink: 0;
+    width: fit-content;
+  }
+  .selection i {
+    margin-left: 30px;
+  }
+  /* Une seule photo sur le cadre photo */
+  .cadre-photos .photos-right {
+    display: none;
+  }
+  .navigation {
+    display: none;
+  }
+  h2 {
+    margin-top: 30px;
+  }
+  /* Réduction de police du texte */
+  .main_text p {
+    font-size: 16px;
+  }
+  /* modification du caroussel */
+  .immanquables {
+    flex-direction: column;
+    height: 680px;
+  }
+  .immanquables .text {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .caroussel {
+    width: 100%;
+  }
+  .diapo-caroussel {
+    width: calc(75% - 4px);
+  }
+  .image-diapo {
+    height: 80%;
+  }
 }
