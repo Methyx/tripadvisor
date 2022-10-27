@@ -96,8 +96,8 @@ button.nav_header:hover {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  position: sticky;
-  top: 0;
+  /* position: sticky;
+  top: 0; */
 }
 .menu .selection {
   flex-grow: 1;
@@ -184,14 +184,14 @@ p.navigation,
   overflow-x: scroll;
 }
 .diapo-caroussel {
-  width: 33%;
+  width: calc(33% - 4px);
   height: 100%;
   flex-shrink: 0;
 }
 .image-diapo {
   height: 60%;
   width: 100%;
-  /* position: absolute; */
+  position: relative;
 }
 .image-diapo img {
   height: 100%;
@@ -208,26 +208,25 @@ p.navigation,
 .heart {
   width: 40px;
   height: 40px;
-  /* margin-top: -50px; */
   font-size: 20px;
   background-color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  top: 0px;
-  left: 0px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
-/* .diapo-caroussel .customer-choice {
+.diapo-caroussel .customer-choice {
   margin-top: -40px;
   width: 40px;
   height: 40px;
   background-color: yellow;
-  position: relative;
-  top: -20px;
+  position: absolute;
+  bottom: 10px;
   left: 10px;
-} */
+}
 
 /* ================= FOOTER ==================== */
 footer {
