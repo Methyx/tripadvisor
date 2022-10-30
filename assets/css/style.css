@@ -10,6 +10,7 @@
 body {
   font-family: var(--fontRegular);
   background-color: white;
+  margin-top: 80px;
 }
 .container {
   max-width: 1140px;
@@ -37,6 +38,13 @@ h3 {
 /* ================ HEADER ==================== */
 
 header {
+  position: fixed;
+  top: 0;
+  padding-left: calc((100vw - 1140px) / 2);
+  width: 1140px;
+  z-index: 1;
+
+  background-color: white;
   height: 80px;
   display: flex;
   align-items: center;
@@ -266,8 +274,10 @@ footer a:visited {
 
 @media (max-width: 1183px) {
   .container {
-    /* background-color: salmon; */
     padding: 0 15px;
+  }
+  header {
+    width: calc(100vw - 50px);
   }
   /* changement du menu sur 2 lignes */
   .menu {
@@ -294,6 +304,7 @@ footer a:visited {
   header nav .responsive2 {
     display: none;
   }
+
   /* Diminution du cadre photos */
   .cadre-photos {
     height: 275px;
@@ -351,6 +362,9 @@ footer a:visited {
   /* Une seule photo sur le cadre photo */
   .cadre-photos .photos-right {
     display: none;
+  }
+  .cadre-photos {
+    margin: 0 -15px;
   }
   .navigation {
     display: none;
